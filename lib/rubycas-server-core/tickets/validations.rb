@@ -77,7 +77,7 @@ module RubyCAS::Server::Core::Tickets
           $LOG.warn "#{error.code} - #{error.message}"
         else
           st.consume!
-          success = true
+          success = st
           $LOG.info("Ticket '#{ticket}' for service '#{service}' for user '#{st.username}' successfully validated.")
         end
       else
